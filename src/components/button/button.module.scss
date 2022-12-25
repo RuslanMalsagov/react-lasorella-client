@@ -1,0 +1,18 @@
+@import '../../scss/variables';
+
+.button {
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: none;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  &_PrimaryVariant {
+    background-color: var(--PrimaryColor);
+    color: #ffffff;
+  }
+}
