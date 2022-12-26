@@ -10,9 +10,13 @@
   color: #fff;
   font-size: 20px;
   text-align: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   &_PrimaryVariant {
     background-color: var(--PrimaryColor);
     color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  }
+  &_OutlineVariant {
+    background-color: var(--ButtonOutlineColor);
+    border: 1px solid #969696;
   }
 }

@@ -1,11 +1,15 @@
 export enum CssVariable {
   PrimaryColor,
+  SecondaryColor,
+  ButtonOutlineColor,
   ButtonRippleColor,
 }
 
 const cssVariableNames = {
   [CssVariable.PrimaryColor]: '--PrimaryColor',
   [CssVariable.ButtonRippleColor]: '--RippleColor',
+  [CssVariable.ButtonOutlineColor]: '--ButtonOutlineColor',
+  [CssVariable.SecondaryColor]: '--SecondaryColor'
 };
 
 /**
