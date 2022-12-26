@@ -1,0 +1,22 @@
+@import '../../scss/variables';
+
+.spinner {
+  display: inline-block;
+  &__after {
+    content: ' ';
+    display: block;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: var(--PrimaryColor);
+    animation: spinnerRing 1.2s linear infinite;
+  }
+}
+
+@keyframes spinnerRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
