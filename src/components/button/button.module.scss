@@ -13,17 +13,19 @@
   color: #fff;
   font-size: 20px;
   text-align: center;
+  &__spinner {
+    position: absolute;
+    z-index: 1;
+  }
   &_primaryVariant {
     background-color: var(--PrimaryColor);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   }
   &_outlineVariant {
     background-color: var(--ButtonOutlineColor);
     border: 1px solid #969696;
   }
-  &__spinner {
-    position: absolute;
-    z-index: 1;
+  &_shadow {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   }
   &_disabled {
     position: relative;

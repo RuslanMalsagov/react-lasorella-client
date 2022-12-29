@@ -12,9 +12,10 @@ interface IButtonProps {
   children?: string | React.ReactNode;
   isDisabled?: boolean;
   isLoading?: boolean;
+  isShadow?: boolean;
 }
 
-export const Button = ({ children, variant = ButtonVariant.Outline, isDisabled, isLoading, ...props }: IButtonProps) => {
+export const Button = ({ children, variant = ButtonVariant.Primary, isShadow, isDisabled, isLoading, ...props }: IButtonProps) => {
   return (
     <button
       {...props}
@@ -22,6 +23,7 @@ export const Button = ({ children, variant = ButtonVariant.Outline, isDisabled, 
         [styles.button_primaryVariant]: variant === ButtonVariant.Primary,
         [styles.button_outlineVariant]: variant === ButtonVariant.Outline,
         [styles.button_disabled]: isDisabled || isLoading,
+        [styles.button_shadow]: isShadow,
       })}>
       {children}
       {isLoading && <Spinner className={styles.button__spinner} size={30} />}

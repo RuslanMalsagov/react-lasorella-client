@@ -27,8 +27,8 @@ export function Ripple({ duration = 850, color = CssVariable.ButtonRippleColor }
     const rippleContainer = e.currentTarget.getBoundingClientRect();
 
     const size = rippleContainer.width > rippleContainer.height ? rippleContainer.width : rippleContainer.height;
-    const x = e.pageX - size / 2;
-    const y = e.pageY - size / 2;
+    const x = e.pageX - rippleContainer.left - size / 2;
+    const y = e.pageY - rippleContainer.top - size / 2;
     const newRipple = {
       x,
       y,

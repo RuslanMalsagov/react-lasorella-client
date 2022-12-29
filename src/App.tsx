@@ -1,4 +1,5 @@
 import { Button } from './components/button';
+import { Input } from './components/input';
 import { Spinner } from './components/spinner';
 
 export function App() {
@@ -6,6 +7,7 @@ export function App() {
     <div className='App'>
       <Button>Добавить</Button>
       <Spinner size={30} />
+      <Input />
     </div>
   );
 }
