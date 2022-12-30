@@ -12,7 +12,7 @@
     transform: scale(0);
     border-radius: 100%;
     opacity: 0.9;
-    background-color: var(--RippleColor); // Цвет волны
+    background-color: var(--rippleColor); // Цвет волны
     animation-name: ripple;
   }
   @keyframes ripple {

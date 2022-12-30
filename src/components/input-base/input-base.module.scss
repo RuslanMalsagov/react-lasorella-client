@@ -1,0 +1,68 @@
+@import '../../scss/variables';
+
+.inputBase {
+  position: relative;
+  &__label {
+    display: block;
+    color: var(--textColor);
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+  &__wrapper {
+    border-radius: 10px;
+    border: 1px solid var(--buttonOutlineColor);
+    background-color: var(--buttonOutlineColor);
+    margin-bottom: 5px;
+    &_defaultSize {
+      height: 50px;
+    }
+    &_largeSize {
+      height: 40px;
+    }
+    &_successStatus {
+      border-color: var(--successColor);
+    }
+    &_warningStatus {
+      border-color: var(--warningColor);
+    }
+    &_errorStatus {
+      border-color: var(--errorColor);
+    }
+    &_disabled {
+      position: relative;
+      &::after {
+        content: ' ';
+        border-radius: 10px;
+        top: -1px;
+        bottom: -1px;
+        right: -1px;
+        left: -1px;
+        background-color: var(--buttonOutlineColor);
+        opacity: 0.5;
+      }
+    }
+  }
+  &__rightContentWrapper {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+  }
+  &__bottomText {
+    color: var(--textColorGray);
+    position: absolute;
+    &_successStatus {
+      color: var(--successColor);
+    }
+    &_warningStatus {
+      color: var(--warningColor);
+    }
+    &_errorStatus {
+      color: var(--errorColor);
+    }
+  }
+}

@@ -3,13 +3,23 @@ export enum CssVariable {
   SecondaryColor,
   ButtonOutlineColor,
   ButtonRippleColor,
+  SuccessColor,
+  WarningColor,
+  ErrorColor,
+  TextColor,
+  TextColorGray,
 }
 
 const cssVariableNames = {
-  [CssVariable.PrimaryColor]: '--PrimaryColor',
-  [CssVariable.ButtonRippleColor]: '--RippleColor',
-  [CssVariable.ButtonOutlineColor]: '--ButtonOutlineColor',
-  [CssVariable.SecondaryColor]: '--SecondaryColor'
+  [CssVariable.PrimaryColor]: '-primaryColor',
+  [CssVariable.ButtonRippleColor]: '--rippleColor',
+  [CssVariable.ButtonOutlineColor]: '--buttonOutlineColor',
+  [CssVariable.SecondaryColor]: '--secondaryColor',
+  [CssVariable.SuccessColor]: '--successColor',
+  [CssVariable.WarningColor]: '--warningColor',
+  [CssVariable.ErrorColor]: '--errorColor',
+  [CssVariable.TextColor]: '--textColor',
+  [CssVariable.TextColorGray]: '--textColorGray',
 };
 
 /**

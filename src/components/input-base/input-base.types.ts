@@ -1,5 +1,5 @@
 export enum InputStatus {
-  Succes,
+  Success,
   Error,
   Warning,
 }

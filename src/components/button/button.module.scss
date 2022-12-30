@@ -18,10 +18,10 @@
     z-index: 1;
   }
   &_primaryVariant {
-    background-color: var(--PrimaryColor);
+    background-color: var(--primaryColor);
   }
   &_outlineVariant {
-    background-color: var(--ButtonOutlineColor);
+    background-color: var(--buttonOutlineColor);
     border: 1px solid #969696;
   }
   &_shadow {
