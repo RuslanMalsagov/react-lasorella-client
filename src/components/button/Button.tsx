@@ -13,15 +13,27 @@ interface IButtonProps {
   isDisabled?: boolean;
   isLoading?: boolean;
   isShadow?: boolean;
+  className?: string;
 }
 
-export const Button = ({ children, variant = ButtonVariant.Primary, isShadow, isDisabled, isLoading, ...props }: IButtonProps) => {
+export const Button = ({
+  children,
+  variant = ButtonVariant.Primary,
+  isShadow,
+  isDisabled,
+  isLoading,
+  className,
+  size,
+  ...props
+}: IButtonProps) => {
   return (
     <button
       {...props}
-      className={cn(styles.button, {
+      className={cn(styles.button, className, {
         [styles.button_primaryVariant]: variant === ButtonVariant.Primary,
         [styles.button_outlineVariant]: variant === ButtonVariant.Outline,
+        [styles.button_smallSize]: size === ButtonSize.Small,
+        [styles.button_largeSize]: size === ButtonSize.Large,
         [styles.button_disabled]: isDisabled || isLoading,
         [styles.button_shadow]: isShadow,
       })}>

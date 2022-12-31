@@ -24,6 +24,12 @@
     background-color: var(--buttonOutlineColor);
     border: 1px solid #969696;
   }
+  &_smallSize {
+    height: 50px;
+  }
+  &_largeSize {
+    height: 60px;
+  }
   &_shadow {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   }

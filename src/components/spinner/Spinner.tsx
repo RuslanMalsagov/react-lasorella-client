@@ -9,6 +9,14 @@ interface ISpinnerProps {
   className?: string;
 }
 
+/**
+ *
+ * @param size Размер спиннера
+ * @param thickness Толщина спиннера
+ * @param color Цвет Спиннера
+ * @returns
+ */
+
 export const Spinner = ({ size, className, thickness = 5, color = CssVariable.ButtonOutlineColor, ...props }: ISpinnerProps) => {
   return (
     <span className={cn(styles.spinner, className)}>

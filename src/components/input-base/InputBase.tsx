@@ -60,7 +60,9 @@ export const InputBase = ({
         {(RightContent || isLoading) && (
           <div className={styles.inputBase__rightContentWrapper}>
             {RightContent && !isLoading ? RightContent : null}
-            {isLoading && <Spinner size={30} color={status !== undefined ? getColorByInputStatus(status) : CssVariable.PrimaryColor} />}
+            {isLoading && (
+              <Spinner size={30} color={status !== undefined ? getColorByInputStatus(status) : CssVariable.ButtonOutlineColor} />
+            )}
           </div>
         )}
       </div>
