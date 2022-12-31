@@ -8,6 +8,7 @@ export enum CssVariable {
   ErrorColor,
   TextColor,
   TextColorGray,
+  BackgroundBodyColor,
 }
 
 const cssVariableNames = {
@@ -20,6 +21,7 @@ const cssVariableNames = {
   [CssVariable.ErrorColor]: '--errorColor',
   [CssVariable.TextColor]: '--textColor',
   [CssVariable.TextColorGray]: '--textColorGray',
+  [CssVariable.BackgroundBodyColor]: '--backgroundBodyColor',
 };
 
 /**

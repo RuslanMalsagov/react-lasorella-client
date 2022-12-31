@@ -4,8 +4,9 @@ import cn from 'classnames';
 import { Spinner } from '../spinner';
 import { getColorByInputStatus } from './input-base.utils';
 import { CssVariable } from '../../utils/get-css-variable';
+import { PropsWithChildren, HTMLAttributes } from 'react';
 
-export interface IInputBaseProps {
+export interface IInputBaseProps extends PropsWithChildren {
   label?: string;
   status?: InputStatus;
   size?: InputSize;
@@ -13,14 +14,41 @@ export interface IInputBaseProps {
   isDisabled?: boolean;
   isLoading?: boolean;
   RightContent?: JSX.Element;
+  containerProps?: Props<HTMLAttributes<HTMLDivElement>, HTMLDivElement>; // Props фий? Мичар ений? сан ез?
+  wrapperProps?: Props<HTMLAttributes<HTMLDivElement>, HTMLDivElement>; // Props фий? Мичар ений? сан ез?
 }
 
-export const InputBase = ({ label, status, size, bottomText, isDisabled, isLoading, RightContent }: IInputBaseProps) => {
+/**
+ * Компонент, который является корневым для компонентов Input, Dropdown, PhoneInput, PasswordInput
+ * @param label текст, который отображается над инпутом
+ * @param status статус инпута, от которого зависит какого цвета обводка и нижний текст
+ * @param size размер инпута. Default - высота 50px, Large - высота 60px
+ * @param bottomText нижний текст
+ * @param isDisabled заблокирован ли инпут
+ * @param isLoading отображается ли загрузка
+ * @param RightContent контент в правой части InputBase
+ * @param wrapperProps пропсы элемента, который оборачивает children
+ * @param containerProps пропсы контейнера
+ */
+
+export const InputBase = ({
+  label,
+  status,
+  size,
+  bottomText,
+  isDisabled,
+  isLoading,
+  RightContent,
+  children,
+  wrapperProps,
+  containerProps,
+}: IInputBaseProps) => {
   return (
-    <div className={cn(styles.inputBase)}>
+    <div {...containerProps} className={cn(styles.inputBase, containerProps?.className)}>
       {label !== undefined && <span className={styles.inputBase__label}>{label}</span>}
       <div
-        className={cn(styles.inputBase__wrapper, {
+        {...wrapperProps}
+        className={cn(styles.inputBase__wrapper, wrapperProps?.className, {
           [styles.inputBase__wrapper_defaultSize]: size === InputSize.Default,
           [styles.inputBase__wrapper_largeSize]: size === InputSize.Large,
           [styles.inputBase__wrapper_successStatus]: status === InputStatus.Success,
@@ -28,6 +56,7 @@ export const InputBase = ({ label, status, size, bottomText, isDisabled, isLoadi
           [styles.inputBase__wrapper_errorStatus]: status === InputStatus.Error,
           [styles.inputBase__wrapper_disabled]: isDisabled,
         })}>
+        {children}
         {(RightContent || isLoading) && (
           <div className={styles.inputBase__rightContentWrapper}>
             {RightContent && !isLoading ? RightContent : null}
