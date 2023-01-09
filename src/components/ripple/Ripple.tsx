@@ -48,6 +48,7 @@ export function Ripple({ duration = 850, color = CssVariable.ButtonRippleColor }
     }
     return () => window.clearTimeout(bounce);
   }, [rippleArray.length]);
+  
   return (
     <div onMouseDown={addRipple} className={styles.ripple_container}>
       {rippleArray.length !== 0 &&
