@@ -24,6 +24,7 @@ export function Ripple({ duration = 850, color = CssVariable.ButtonRippleColor }
   const [rippleArray, setRippleArray] = useState<TRippleItem[]>([]);
 
   const addRipple = (e: React.MouseEvent) => {
+    
     const rippleContainer = e.currentTarget.getBoundingClientRect();
     const size = rippleContainer.width > rippleContainer.height ? rippleContainer.width : rippleContainer.height;
     const x = e.pageX - rippleContainer.left - size / 2;
