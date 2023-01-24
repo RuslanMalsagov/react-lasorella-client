@@ -37,7 +37,6 @@ export function Ripple({ duration = 850, color = CssVariable.ButtonRippleColor }
   };
 
   useEffect(() => {
-  
     let bounce: number | undefined;
     if (rippleArray.length > 0) {
       window.clearTimeout(bounce);
