@@ -8,8 +8,8 @@ import { ReactComponent as SearchIcon } from './img/search_icon.svg';
 
 export const Header = () => {
   return (
-    <div className={styles.header}>
-      <Container>
+    <Container>
+      <div className={styles.header}>
         <div className={styles.header__logo}>
           <span>LASORELLA</span>
         </div>
@@ -27,7 +27,7 @@ export const Header = () => {
           Корзина
           <span className={styles.header__buttonCart__product}>4</span>
         </Button>
-      </Container>
-    </div>
+      </div>
+    </Container>
   );
 };
