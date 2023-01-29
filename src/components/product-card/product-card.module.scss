@@ -1,0 +1,41 @@
+.productCard {
+  color: var(--textColor);
+  background-color: var(--buttonOutlineColor);
+  border-radius: 15px;
+  width: 329px;
+  &__imageProduct {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+  }
+  &__nameProduct {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    div {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 27px;
+    }
+    span {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+  &__descriptionProduct {
+    color: var(--textColorGray);
+    margin-top: 5px;
+  }
+  &__priceButtonProduct {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    div {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
