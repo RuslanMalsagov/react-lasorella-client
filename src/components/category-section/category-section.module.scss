@@ -1,0 +1,17 @@
+.categorySection {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &__title {
+    border-left: 4px solid var(--primaryColor);
+    padding-left: 19px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  &__cards {
+    padding-top: 50px;
+    display: flex;
+  }
+}
