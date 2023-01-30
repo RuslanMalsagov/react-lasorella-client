@@ -4,6 +4,7 @@ import { Divider } from './components/divider';
 import { Header } from './components/header';
 import { ProductCard } from './components/product-card';
 import { MainPage } from './pages/main-page';
+import { OurCafeSection } from './pages/main-page/components/our-cafe-section';
 
 export function App() {
   return (
@@ -11,8 +12,10 @@ export function App() {
       <Header />
       <MainPage />
       <Category />
+      <CategorySection />
       <Divider />
       <CategorySection />
+      <OurCafeSection />
     </div>
   );
 }

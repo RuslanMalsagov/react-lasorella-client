@@ -1,0 +1,65 @@
+.OurCafeSection {
+  background-image: url('../../../../assets/bg-our-cafe.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(20, 20, 20);
+  color: var(--textColor);
+  margin: 0 40px;
+  position: relative;
+  z-index: 2;
+  &::before {
+    content: url('../../../../assets/mask-bg-our-cafe.png');
+    position: absolute;
+    left: 250px;
+    top: 1px;
+    z-index: -1;
+  }
+  &__content {
+    position: relative;
+    z-index: 0;
+    // z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // height: 100%;
+    &__left {
+      width: 45%;
+      //   width: 563px;
+      h2 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        text-transform: uppercase;
+      }
+      p {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 25px;
+        color: var(--textColorGray);
+
+        margin: 26px 0 60px 0;
+      }
+    }
+    &__right {
+      margin: 71px 0;
+      width: 44%;
+      display: flex;
+      //   flex-direction: column;
+      flex-wrap: wrap;
+      span:nth-last-child(1) {
+        margin-top: 40px;
+      }
+      &__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 0.8;
+        margin: 10px;
+        width: 228px;
+        height: 228px;
+        background-color: var(--secondaryColor);
+      }
+    }
+  }
+}

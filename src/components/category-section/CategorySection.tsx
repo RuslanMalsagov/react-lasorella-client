@@ -13,10 +13,6 @@ export const CategorySection = () => {
       <div className={styles.categorySection__cards}>
         <ProductCard />
         <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
       </div>
     </div>
   );

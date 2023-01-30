@@ -1,6 +1,6 @@
 .categorySection {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   &__title {
     border-left: 4px solid var(--primaryColor);
     padding-left: 19px;
@@ -11,7 +11,8 @@
     color: #ffffff;
   }
   &__cards {
-    padding-top: 50px;
+    margin-top: 50px;
     display: flex;
+    overflow-x: auto;
   }
 }
