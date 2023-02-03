@@ -35,5 +35,13 @@
         color: var(--textColorGray);
       }
     }
+    &__rightContent {
+      margin-left: 200px;
+      a {
+        text-decoration: none;
+        color: var(--textColor);
+        margin: 0 10px;
+      }
+    }
   }
 }
