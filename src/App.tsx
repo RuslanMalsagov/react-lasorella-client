@@ -10,7 +10,6 @@ import { OurCafeSection } from './pages/main-page/components/our-cafe-section';
 export function App() {
   return (
     <div className='App'>
-      
       <Header />
       <MainPage />
       <Category />
